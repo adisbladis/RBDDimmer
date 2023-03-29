@@ -9,6 +9,8 @@
 	#include "esp32/RBDmcuESP32.h"
 #elif defined(ARDUINO_ARCH_ESP8266)
 	#include "esp8266/RBDmcuESP8266.h"
+#elif defined(ARDUINO_ARCH_RP2040)
+	#include "rp2040/RBDmcuRP2040.h"
 #elif defined(ARDUINO_ARCH_SAMD)
 	#include "samd/RBDmcuSAMD21.h"
 #elif defined(ARDUINO_ARCH_SAM)
@@ -17,8 +19,8 @@
 	#include "stm32duino/STM32F1/RBDmcuSTM32F1.h"
 #elif defined(ARDUINO_ARCH_STM32F4)
 	#include "stm32duino/STM32F4/RBDmcuSTM32F4.h"
-#else 
-	#error "This library only supports boards with an AVR, ESP32, ESP8266, SAMD, SAM, STM32F1/F4 processor."
+#else
+	#error "This library only supports boards with an AVR, ESP32, ESP8266, RP2040, SAMD, SAM, STM32F1/F4 processor."
 #endif
 
 typedef enum
